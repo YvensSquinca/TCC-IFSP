@@ -7,12 +7,15 @@ class Inicio extends CI_Controller {
         $this->load->view('common/navbar');
 
         $this->load->view('paginainicial/fotologo');
-        $this->load->view('paginainicial/integrantes');
         $this->load->view('paginainicial/fazemos');
+   
+        $this->load->model('DepoimentosModel');        
         $this->load->view('paginainicial/testemunhos');
+        
         $this->load->view('paginainicial/carrosel');
+        
         $this->load->view('paginainicial/contato');
 
-        $this->load->view('common/footer');
+        $this->load->view('common/footer'); 
 	}
 }

@@ -1,281 +1,466 @@
-/* Required height of parents of the Half Page Carousel for proper displaying carousel itself */
-html,
-body,
-.view {
-  height: 100%; }
-
-@media (max-width: 740px) {
-  .full-page-intro {
-    height: 1000px; } }
-
-/* Half Page Carousel itself*/
-.carousel {
-  height: 50%; }
-  .carousel .carousel-inner {
-    height: 100%; }
-    .carousel .carousel-inner .carousel-item,
-    .carousel .carousel-inner .active {
-      height: 100%; }
-
-/* Adjustment for mobile devices*/
-@media (max-width: 776px) {
-  .carousel {
-    height: 100%; } }
-
-/* Navbar animation */
-.navbar {
-  background-color: rgba(0, 0, 0, 0.2); }
-
-.top-nav-collapse {
-  background-color: #1C2331; }
-
-/* Adding color to the Navbar on mobile */
-@media only screen and (max-width: 768px) {
-  .navbar {
-    background-color: #1C2331; } }
-
-/* Footer color for sake of consistency with Navbar */
-.page-footer {
-  background-color: #1C2331; }
-
-  
-  /* Navbar Personalizada
-   Icon 1 */
-
-.animated-icon1, .animated-icon2, .animated-icon3 {
-  width: 30px;
-  height: 20px;
+/* Navbar ------------------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Arimo:400,400italic,700,700italic);
+main {
+  z-index: 2; 
   position: relative;
-  margin: 0px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  cursor: pointer;
-  }
-  
-  .animated-icon1 span, .animated-icon2 span, .animated-icon3 span {
-  display: block;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  border-radius: 9px;
-  opacity: 1;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
-  }
-  
-  .animated-icon1 span {
-  background: #ff0000;
-  }
-  
-  .animated-icon2 span {
-  background: #ff0000;
-  }
-  
-  .animated-icon3 span {
-  background: #ff0000;
-  }
-  
-  .animated-icon1 span:nth-child(1) {
-  top: 0px;
-  }
-  
-  .animated-icon1 span:nth-child(2) {
-  top: 10px;
-  }
-  
-  .animated-icon1 span:nth-child(3) {
-  top: 20px;
-  }
-  
-  .animated-icon1.open span:nth-child(1) {
-  top: 11px;
-  -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
-  transform: rotate(135deg);
-  }
-  
-  .animated-icon1.open span:nth-child(2) {
-  opacity: 0;
-  left: -60px;
-  }
-  
-  .animated-icon1.open span:nth-child(3) {
-  top: 11px;
-  -webkit-transform: rotate(-135deg);
-  -moz-transform: rotate(-135deg);
-  -o-transform: rotate(-135deg);
-  transform: rotate(-135deg);
-  }
-  
-  /* Icon 3*/
-  
-  .animated-icon2 span:nth-child(1) {
-  top: 0px;
-  }
-  
-  .animated-icon2 span:nth-child(2), .animated-icon2 span:nth-child(3) {
-  top: 10px;
-  }
-  
-  .animated-icon2 span:nth-child(4) {
-  top: 20px;
-  }
-  
-  .animated-icon2.open span:nth-child(1) {
-  top: 11px;
-  width: 0%;
-  left: 50%;
-  }
-  
-  .animated-icon2.open span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  }
-  
-  .animated-icon2.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  }
-  
-  .animated-icon2.open span:nth-child(4) {
-  top: 11px;
-  width: 0%;
-  left: 50%;
-  }
-  
-  /* Icon 4 */
-  
-  .animated-icon3 span:nth-child(1) {
-  top: 0px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-  }
-  
-  .animated-icon3 span:nth-child(2) {
-  top: 10px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-  }
-  
-  .animated-icon3 span:nth-child(3) {
-  top: 20px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-  }
-  
-  .animated-icon3.open span:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: 0px;
-  left: 8px;
-  }
-  
-  .animated-icon3.open span:nth-child(2) {
-  width: 0%;
-  opacity: 0;
-  }
-  
-  .animated-icon3.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  top: 21px;
-  left: 8px;
-  }
-
- /*Fim da Navbar Personalizada */
-
- /* Botao Personalizado */
-
- @keyframes efeitopersonalizado{
-  0%{
-    transform: rotate(0);
-  }
-  25%{
-    transform: rotate(10deg);
-  }
-  50%{
-   transform: rotate(0);
-  }
-  75%{
-   transform: rotate(-10deg);
-  }
-  100%{
-   transform: rotate(0);
-  }
+  -webkit-transition: transform .7s ease-in-out;
+  -moz-transition: transform .7s ease-in-out;
+  -ms-transition: transform .7s ease-in-out;
+  -o-transition: transform .7s ease-in-out;
+  transition: transform .7s ease-in-out;
 }
-.efeitopersonalizado{
- transition: .3s;
-}
-.efeitopersonalizado:hover{
-  animation-name: efeitopersonalizado;
-  animation-delay: .2s;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-}
-
-/* Navbar Teste */
-
-.sidenav{
+.sidebar {
   height: 100%;
-  width: 0;
+  width: 300px;
   position: fixed;
-  z-index: 1;
   top: 0;
-  left: 0;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-  background-color: aqua;
+  z-index: 1;
+  right: 0;
+  background-color: #212121;
+  overflow: auto;
 }
-.sidenav a{
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
+.bar {
   display: block;
-  color: #818181;
-  transition: 0.3s;
+  height: 4px;
+  width: 40px;
+  background-color: #CC0000;
+  margin: 10px auto;
 }
-.sidenav a:hover{
-  color: #ff0000;
+.button {
+  cursor: pointer;
+  display: inline-block;
+  width: auto;
+  margin: 0 auto;
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
 }
-.sidenav .closebtn{
+.nav-right {
+  position: fixed;
+  right: 60px;
+  top: 6px;
+}
+.nav-right.visible-xs {
+  z-index: 3;
+}
+.hidden-xs {
+  display: none;
+}
+.middle {
+  margin: 0 auto;
+}
+.bar {
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
+}
+.nav-right.visible-xs .active .bar {
+  background-color: #000000;
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
+}
+.button.active .top {
+  -webkit-transform: translateY(15px) rotateZ(45deg);
+  -moz-transform: translateY(15px) rotateZ(45deg);
+  -ms-transform: translateY(15px) rotateZ(45deg);
+  -o-transform: translateY(15px) rotateZ(45deg);
+  transform: translateY(15px) rotateZ(45deg);
+}
+.button.active .bottom {
+  -webkit-transform: translateY(-15px) rotateZ(-45deg);
+  -moz-transform: translateY(-15px) rotateZ(-45deg);
+  -ms-transform: translateY(-15px) rotateZ(-45deg);
+  -o-transform: translateY(-15px) rotateZ(-45deg);
+  transform: translateY(-15px) rotateZ(-45deg);
+}
+.button.active .middle {
+  width: 0;
+}
+.move-to-left {
+  -webkit-transform: translateX(-300px);
+  -moz-transform: translateX(-300px);
+  -ms-transform: translateX(-300px);
+  -o-transform: translateX(-300px);
+  transform: translateX(-300px);
+}
+nav {
+  padding-top: 30px;
+}
+.sidebar-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  margin-top: 120px;
+  text-align: center;
+}
+.sidebar-item {
+  margin: 30px 0;
+  opacity: 0;
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -o-transform: translateY(-20px);
+  transform: translateY(-20px);
+}
+.sidebar-item:first-child {
+  -webkit-transition: all .7s .2s ease-in-out;
+  -moz-transition: all .7s .2s ease-in-out;
+  -ms-transition: all .7s .2s ease-in-out;
+  -o-transition: all .7s .2s ease-in-out;
+  transition: all .7s .2s ease-in-out;
+}
+.sidebar-item:nth-child(2) {
+  -webkit-transition: all .7s .4s ease-in-out;
+  -moz-transition: all .7s .4s ease-in-out;
+  -ms-transition: all .7s .4s ease-in-out;
+  -o-transition: all .7s .4s ease-in-out;
+  transition: all .7s .4s ease-in-out;
+}
+.sidebar-item:nth-child(3) {
+  -webkit-transition: all .7s .6s ease-in-out;
+  -moz-transition: all .7s .6s ease-in-out;
+  -ms-transition: all .7s .6s ease-in-out;
+  -o-transition: all .7s .6s ease-in-out;
+  transition: all .7s .6s ease-in-out;
+}
+.sidebar-item:last-child {
+  -webkit-transition: all .7s .8s ease-in-out;
+  -moz-transition: all .7s .8s ease-in-out;
+  -ms-transition: all .7s .8s ease-in-out;
+  -o-transition: all .7s .8s ease-in-out;
+  transition: all .7s .6s ease-in-out;
+}
+.sidebar-item.active {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+.sidebar-anchor {
+  color: #ffffff;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 7px;
+}
+.sidebar-anchor:before {
+  color: #000000;
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #CC0000;
+  -webkit-transition: all .7s ease-in-out;
+  -moz-transition: all .7s ease-in-out;
+  -ms-transition: all .7s ease-in-out;
+  -o-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out;
+}
+.sidebar-anchor:hover:before {
+  width: 100%;
+}
+.ua {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+}
+.fa {
+  font-size: 1.8em;
+  color: #CC0000;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.ua:hover .fa { 
+  color: #ffffff;
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  transform: scale(1.3);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+@media (min-width: 480px) {
+  .nav-list {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .nav-right {
+    position: absolute;
+  }
+  .hidden-xs {
+    display: block;
+  }
+  .visible-xs {
+    display: none;
+  }
+}
+/* Navbar -------------------------------------------------------------------------------*/ 
+/* Google Maps --------------------------------------------------------------------------*/
+.map-container-section {
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.map-container-section iframe {
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+/* Fim Google Maps --------------------------------------------------------------------------*/
+/* Animação Botão ---------------------------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.basicBox, .swiggleBox, .checkBox {
+  width: 130px;
+  height: 65px;
+  margin: 15px auto;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.00rem;
+  line-height: 65px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+svg {
   position: absolute;
   top: 0;
-  right: 25px;
-  font-size: 35px;
-  margin-left: 50px;
+  left: 0;
 }
-@media screen and (max-height: 450px){
-  .sidenav{padding-top: 15px;}
-  .sidenav a{font-size: 18px;}
+svg rect, svg path, svg polyline {
+  fill: none;
+  stroke: #ff0000;
+  stroke-width: 5;
+}
+.basicBox:hover svg rect, .swiggleBox:hover svg path, .checkBox:hover svg polyline {
+  stroke: #4274D3;
+}
+svg rect {
+  stroke-dasharray: 400, 0;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+}
+.basicBox:hover svg rect {
+  stroke-width: 3;
+  stroke-dasharray: 35, 245;
+  stroke-dashoffset: 38;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+}
+/* Fim Animação Botão ---------------------------------------------------------------------------*/
+/* Animação Luz Botão ---------------------------------------------------------------------------*/
+.h2p {
+  font-family: 'Bungee Shade', cursive;
+  color: #fff;
+  font-size: 30px;
+  
+}
+.h3p {
+  font-family: 'Patrick Hand SC', cursive;
+  color: #fff;
+  font-size: 25px;
+  line-height: 0.9;
+}
+.h4p {
+  font-family: 'Patrick Hand SC', cursive;
+  color: #fff;
+  font-size: 15px;
+  line-height: 0.9;
+  text-align: right;
+}
+.h4l {
+  font-family: 'Patrick Hand SC', cursive;
+  color: #fff;
+  font-size: 15px;
+  line-height: 0.9;
+}
+.light {
+  display: block;
+}
+.light:not(.light) {
+  opacity: 0;
+  animation: flashText 1.0s ease-out alternate infinite;
+}
+.light.light {
+  position: relative;
+  display: inline-block;
+}
+.light.light:before {
+  position: absolute;
+  left: 0;
+  top: -10%;
+  width: 100%;
+  height: 120%;
+  background: #fff;
+  filter: blur(30px);
+  content: "";
+  opacity: 0;
+  animation: flash 1.0s ease-out alternate infinite;
+}
+@keyframes flash {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes flashText {
+  to {
+    opacity: 0.15;
+  }
+}
+/* Fim Animação Luz Botão ------------------------------------------------------------------------*/
+/* Botão Flutuante -------------------------------------------------------------------------------*/
+.btnInfDireitoUp{
+  position: fixed;
+  float: bottom;
+  bottom: 90px;
+  right: 15px;
+  z-index: 2;
+}
+.btnPrincipalUp{
+  font-size: 5px;
+  padding: 10px;
+}
+.btnInfDireito{
+  position: fixed;
+  float: bottom;
+  bottom: 15px;
+  right: 5px;
+  z-index: 2;
+}
+.btnCircular{
+  border-radius: 100%;
+}
+.btnPrincipal{
+  font-size: 10px;
+  padding: 15px;
+}
+/* Botão Fim Flutuante ---------------------------------------------------------------------------*/
+/* Calendario ------------------------------------------------------------------------------------*/
+#calendar {
+  max-width: 90%;
+  margin: 40px auto;
+}
+/* Fim Calendario --------------------------------------------------------------------------------*/
+/* Tela Responsiva -------------------------------------------------------------------------------*/
+.fundoTelaGrande{
+  background-size: 100% 100%;
+  background-image: url("");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
+.imglistadepoimento{
+}  
+  @media screen and (min-width: 800px) {
+    .imglistadepoimento{
+      width: 200px;
+      height: 200px;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .imglistadepoimento{
+      width: 85%;
+      height: 85%;
+    }
+  }
+
+@media screen and (min-width: 800px) {
+  .fundoTelaGrande {
+    background-image: url("http://hospedagem.ifspguarulhos.edu.br/~gu170088x/netotattoo/assets/mdb/img/fundot.png");
+  }
+}
+
+.telaPequena{
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .telaPequena {
+    display: block;
+  }
+}
+
+.imgdepoimentoresponsiva{
+}
+@media screen and (min-width: 800px) {
+  .imgdepoimentoresponsiva{
+    width: 400px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .imgdepoimentoresponsiva{
+    width: 85%;
+    height: 85%;
+  }
+}
+
+.imgorcamentoresponsiva{
+}
+@media screen and (min-width: 800px) {
+  .imgorcamentoresponsiva{
+    width: 400px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .imgorcamentoresponsiva{
+    width: 85%;
+    height: 85%;
+  }
+}
+
+.imgdepoimentoinicioresponsiva{
+}
+@media screen and (min-width: 800px) {
+  .imgdepoimentoinicioresponsiva{
+    width: 40%;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .imgdepoimentoinicioresponsiva{
+    width: 85%;
+    height: 250px;
+  }
+}
+.containerfull{
+  height: 100%; 
+}
+/* Fim Tela Responsiva ----------------------------------------------------------------------------*/
+body{
+  background-image: url("assets/mdb/img/fundo.png");
+  background-attachment: fixed; 
+}
+a { 
+  color:#ffffff;
+}
+a:hover { 
+  color:#CC0000;  
+}

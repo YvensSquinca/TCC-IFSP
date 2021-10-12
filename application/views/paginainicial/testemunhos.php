@@ -1,9 +1,19 @@
-<div class="container">
+<?php
+
+$a = $this->DepoimentosModel->Detalhe(1);
+
+$b = $this->DepoimentosModel->Detalhe(2);
+
+$c = $this->DepoimentosModel->Detalhe(3);
+
+?>
+
+<div class="col-lg-8 col-md-12 col-12 mb-5">
     <!-- Section: Testimonials v.2 -->
-    <section class="text-center my-5 col-lg-12 col-md-12 mb-5">
+    <section class="text-center">
 
     <!-- Section heading -->
-    <h2 class="h1-responsive font-weight-bold my-5" style="color:white;">Depoimentos</h2>
+    <h2 class="h1-responsive my-5 h2p" style="color:white;">Depoimentos</h2>
 
     <div class="wrapper-carousel-fix">
         <!-- Carousel Wrapper -->
@@ -16,18 +26,15 @@
             <div class="testimonial">
                 <!--Avatar-->
                 <div class="avatar mx-auto mb-4">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" class="rounded-circle img-fluid"
-                    alt="First sample avatar image">
+                <?php
+                    echo '<img src="data:image/jpeg;base64,'.base64_encode( $a['imagem'] ).'" class="rounded-circle imgdepoimentoinicioresponsiva" alt="First sample avatar image">';
+                ?>
                 </div>
                 <!--Content-->
-                <p style="color:white;">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
-                eos
-                id officiis hic tenetur quae quaerat ad velit ab. Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit. Dolore cum accusamus eveniet molestias voluptatum inventore laboriosam labore
-                sit, aspernatur praesentium iste impedit quidem dolor veniam.
+                <p class="h3p" style="color:white;">
+                <?= $a['mensagem']  ?>
                 </p>
-                <h4 class="font-weight-bold" style="color:white;">Anna Deynah</h4>
+                <h4 class="font-weight-bold" style="color:white;"><?= $a['nome']  ?></h4>
             </div>
             </div>
             <!--First slide-->
@@ -36,17 +43,15 @@
             <div class="testimonial">
                 <!--Avatar-->
                 <div class="avatar mx-auto mb-4">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" class="rounded-circle img-fluid"
-                    alt="Second sample avatar image">
+                <?php
+                    echo '<img src="data:image/jpeg;base64,'.base64_encode( $b['imagem'] ).'" class="rounded-circle imgdepoimentoinicioresponsiva" alt="First sample avatar image" width=40%>';
+                ?>
                 </div>
                 <!--Content-->
-                <p style="color:white;">
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                odit
-                aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
-                porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-                non numquam eius modi tempora incidunt ut labore. </p>
-                <h4 class="font-weight-bold" style="color:white;">Maria Kate</h4>
+                <p class="h3p" style="color:white;">
+                <?= $b['mensagem']  ?>
+                </p>
+                <h4 class="font-weight-bold" style="color:white;"><?= $b['nome']  ?></h4>
             </div>
             </div>
             <!--Second slide-->
@@ -55,16 +60,15 @@
             <div class="testimonial">
                 <!--Avatar-->
                 <div class="avatar mx-auto mb-4">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" class="rounded-circle img-fluid"
-                    alt="Third sample avatar image">
+                <?php
+                    echo '<img src="data:image/jpeg;base64,'.base64_encode( $c['imagem'] ).'" class="rounded-circle imgdepoimentoinicioresponsiva" alt="First sample avatar image" width=40%>';
+                ?>
                 </div>
                 <!--Content-->
-                <p style="color:white;">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
-                error sit voluptatem accusantium doloremque laudantium.</p>
-                <h4 class="font-weight-bold" style="color:white;">John Doe</h4>
+                <p class="h3p" style="color:white;">
+                <?= $c['mensagem']  ?>
+                </p>
+                <h4 class="font-weight-bold" style="color:white;"><?= $c['nome']  ?></h4>
             </div>
             </div>
             <!--Third slide-->
@@ -85,8 +89,11 @@
         </div>
         <!-- Carousel Wrapper -->
     </div>
-
+    <a href="<?= base_url('index.php/Depoimentos/lista') ?>"><h5 class="font-weight-bold mt-3 h4p">
+        <span class="light">Veja Mais Depoimentos...</span>
+    </h5></a>
     </section>
     <!-- Section: Testimonials v.2 -->
+    
 </div>
 <br><br>

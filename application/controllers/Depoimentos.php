@@ -2,18 +2,20 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Depoimentos extends CI_Controller {
-    
-    public function index(){
+     /*
+    *Lista de Depoimentos   
+    */
+    public function lista(){
         $this->load->view('common/header');
         $this->load->view('common/navbar');
-
         
+        $this->load->model('DepoimentosModel');
+        $this->load->view('depoimentos/lista_depoimentos');
         
         $this->load->view('common/footer');
     }
-
     /*
-    *Cria de Depoimentos   
+    *Cria Depoimento 
     */
     public function criar(){
         $this->load->view('common/header');
@@ -22,32 +24,15 @@ class Depoimentos extends CI_Controller {
         $this->load->model('DepoimentosModel');
         $this->DepoimentosModel->criar();
         
-        $a['titulo'] = "Cadastro de cliente";
-        $a['btn'] = "Cadastrar";
-        
-        $this->load->view('depoimentos/cadastro_depoimentos', $a);
+        $this->load->view('depoimentos/cadastro_depoimentos');
 
 		$this->load->view('common/footer');
     }
-    
     /*
-    *Lista de Depoimentos   
-    */
-    public function lista(){
-        $this->load->view('common/header');
-        $this->load->view('common/navbar');
-        
-        $this->load->model('DepoimentosModel');
-        $data ['table'] = $this->DepoimentosModel->listar();
-        $this->load->view('depoimentos/lista_depoimentos', $data); 
-        
-        $this->load->view('common/footer');
-    }
-
-     /*
-    * Detalhe do Depoimento 
+    *Detalhe do Depoimento 
     */
     public function detalhe($id){
+              
         $this->load->view('common/header');
         $this->load->view('common/navbar');
         
@@ -56,31 +41,34 @@ class Depoimentos extends CI_Controller {
         $this->load->view('depoimentos/detalhe_depoimentos', $a);
         
         $this->load->view('common/footer');
+    
     }
-
     /*
-    * EDITAR OS USUARIOS 
-    */
+    * Editar Depoimento 
     public function atualizar($id){
         $this->load->view('common/header');
         $this->load->view('common/navbar');
 
         $this->load->model('DepoimentosModel');
+        
         $this->DepoimentosModel->atualizar($id);
         $a['depoimentos'] = $this->DepoimentosModel->detalhe($id);
-        $a['titulo'] = "Atualização do cliente";
-        $a['btn'] = "Atualizar";
+        
         $this->load->view('depoimentos/cadastro_depoimentos', $a);
         
 		$this->load->view('common/footer');
     }
-
     /*
-    * REMOVER OS USUARIOS 
+    * Remover Depoimento 
     */
     public function remover($id){
-        $this->load->model('DepoimentosModel');
-        $this->DepoimentosModel->remover($id);
-        redirect('depoimentos');
+        if ($this->ion_auth->is_admin ())
+        {
+            $this->load->model('DepoimentosModel');
+            $this->DepoimentosModel->remover($id);
+            redirect('Depoimentos/lista');
+        }
+        else 
+        redirect('auth/login');
     }
 }

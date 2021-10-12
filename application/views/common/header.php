@@ -13,18 +13,32 @@
 @    @ @       @   @@ @       @
 @@@@@  @@@@@@@ @    @ @@@@@@@ @@@@@@@
 -->
-<html>
+<html lang="pt-br">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Netto Tattoo</title>
-  <link rel='shortcut icon' href="assets/mdb/img/catrina.png" />
+  <link rel='shortcut icon' href="<?= base_url('assets/mdb/img/catrina.png')?>" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="assets/mdb/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/mdb/css/mdb.min.css" rel="stylesheet">
-  <link href="assets/mdb/css/style.min.css" rel="stylesheet">
+  <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
+  <link href="<?= base_url('assets/mdb/css/bootstrap.min.css')?>" rel="stylesheet">
+  <link href="<?= base_url('assets/mdb/css/mdb.min.css')?>" rel="stylesheet">
+  <link href="<?= base_url('assets/mdb/css/style.min.css')?>" rel="stylesheet">
+  <link href="<?= base_url('assets/mdb/css/style.css')?>" rel="stylesheet">
+  <link href="<?= base_url('assets/mdb/css/datatables.min.css')?>" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css"><font></font>
+  
+  <link href="<?= base_url('assets/mdb/css/packages/core/main.css')?>" rel='stylesheet' />
+  <link href="<?= base_url('assets/mdb/css/packages/bootstrap/main.css')?>" rel='stylesheet' />
+  <link href="<?= base_url('assets/mdb/css/packages/timegrid/main.css')?>" rel='stylesheet' />
+  <link href="<?= base_url('assets/mdb/css/packages/daygrid/main.css')?>" rel='stylesheet' />
+  <link href="<?= base_url('assets/mdb/css/packages/list/main.css')?>" rel='stylesheet' />
+  <!-- titulo -->
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+  <!-- texto -->
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet">
   <style>
     
     /* Navbar ------------------------------------------------------------------*/
@@ -40,7 +54,7 @@
     }
     .sidebar {
       height: 100%;
-      width: 400px;
+      width: 320px;
       position: fixed;
       top: 0;
       z-index: 1;
@@ -112,11 +126,11 @@
       width: 0;
     }
     .move-to-left {
-      -webkit-transform: translateX(-400px);
-      -moz-transform: translateX(-400px);
-      -ms-transform: translateX(-400px);
-      -o-transform: translateX(-400px);
-      transform: translateX(-400px);
+      -webkit-transform: translateX(-320px);
+      -moz-transform: translateX(-320px);
+      -ms-transform: translateX(-320px);
+      -o-transform: translateX(-320px);
+      transform: translateX(-320px);
     }
     nav {
       padding-top: 30px;
@@ -206,7 +220,7 @@
     }
     .fa {
       font-size: 1.4em;
-      color: #000000;
+      color: #CC0000;
       -webkit-transition: all 1s ease;
       -moz-transition: all 1s ease;
       -ms-transition: all 1s ease;
@@ -305,7 +319,6 @@
     /* Fim Animação Botão ---------------------------------------------------------------------------*/
     /* Animação Luz Botão ---------------------------------------------------------------------------*/
     .h2p {
-      font-family: 'Comic Sans MS';
       color: #fff;
       text-transform: uppercase;
       font-weight: bold;
@@ -377,5 +390,25 @@
     /* Fim Tela Responsiva ----------------------------------------------------------------------------*/
   </style>
 </head>
-<body id="body">
-
+<body style="background-image: url('<?php echo base_url(); ?>assets/mdb/img/fundo.png');">
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content elegant-color-dark">
+      <div class="modal-header">
+        <h5 class="modal-title h2p" id="exampleModalLabel" style="color:white;">Historia</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body h3p text-center" style="color:white;">
+      <p>João Avelino da Silva, popularmente conhecido como Neto, é tatuador, body piercing, e dono do estúdio Neto tattoo.</p> 
+      <p>Aos 12 anos descobriu sua paixão por desenhar, ao crescer viu aí uma grande oportunidade de trabalho, em 2010 realizou o curso de tatuagem e colocação de piercing, ao terminar conseguiu abrir em 2011 o seu primeiro estúdio de tatuagens, localizado na rua Remanso, número 1209, no bairro vila nova Bonsucesso, na cidade de Guarulhos.</p>
+      <p>Em 2015, inaugurou o estúdio atual localizado na rua cordeiro, número 1574, no bairro vila nova Bonsucesso, na cidade de Guarulhos, e espera ter sucesso na sua carreira de tatuador</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
