@@ -14,7 +14,7 @@
     <img src="<?= base_url('assets/mdb/img/catrina.png')?>" alt="katrina" width=50% style="text-align: center;">
     <li class="sidebar-item h3p"><a href="<?= base_url('') ?>" class="sidebar-anchor">Home</a></li>
     <li class="sidebar-item h3p"><a href="<?= base_url('index.php/Galeria') ?>" class="sidebar-anchor">Galeria</a></li>
-    <!--<li class="sidebar-item h3p"><a href="http://hospedagem.ifspguarulhos.edu.br/~gu170088x/netotattoo/assets/mdb/themes.php" class="sidebar-anchor">Agenda</a></li>-->
+    <li class="sidebar-item h3p"><a href="http://hospedagem.ifspguarulhos.edu.br/~gu170088x/netotattoo/assets/mdb/themes.php" class="sidebar-anchor">Agenda</a></li>
   <li class="text-center h3p">
     <?php
       if ($this->ion_auth->is_admin ())
