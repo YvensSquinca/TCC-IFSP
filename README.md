@@ -19,6 +19,9 @@ As dificuldades levantadas pelo nosso cliente foi a divulgação do seu trabalho
 * Um botão flutuante onde o cliente do studio pode mandar um orçamento com imagem, local e tamanho da tatuagem. / Em andamento
 * Uma Agenda onde o cliente do studio pode verificar os horarios diposniveis e marca o trabalho em um horario Vago. / Em andamento
  
+## O Sistema 
+A aplicação WEB é totalmente responsivo, se adaptando de acordo com o aparelho utilizado. Foi baseado no sistema CRUD (Create, Read, Update, Delete).
+
 ## Linguagens Utilizadas
 HTML, CSS, JavaScript e o framework Bootstrap,PHP juntamente com o framework codeigniter 3, Banco de dados usamos MySQL com PhpMyAdmin.
 
