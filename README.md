@@ -25,3 +25,11 @@ HTML, CSS, JavaScript e o framework Bootstrap,PHP juntamente com o framework cod
 ## Screenshots
 
 <img src="./.github/screenshot.PNG" width="900px">
+<img src="./.github/screenshot1.PNG" width="900px">
+<img src="./.github/screenshot2.PNG" width="900px">
+<img src="./.github/screenshot3.PNG" width="900px">
+<img src="./.github/screenshot4.PNG" width="900px">
+<img src="./.github/screenshot5.PNG" width="900px">
+<img src="./.github/screenshot6.PNG" width="900px">
+<img src="./.github/screenshot7.PNG" width="900px">
+
